@@ -353,7 +353,7 @@ Then, add this line to the **transfer** function so that the sender is refunded:
     function transfer(address _to, uint256 _value) {
         ...
         if(msg.sender.balance < minBalanceForAccounts)
-            sell((minBalanceForAccounts - msg.sender.balance) / sellPrice);
+            send((minBalanceForAccounts - msg.sender.balance) / sellPrice);
     }
 ```
 
